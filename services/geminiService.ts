@@ -3,7 +3,8 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { NLPParseResult, Priority } from "../types";
 
 // Note: For 1M+ users, this API key should be moved to a secure Backend Proxy.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+model: "gemini-1.5-flash",
 
 /**
  * Exponential backoff helper for handling Rate Limits (429 errors)
