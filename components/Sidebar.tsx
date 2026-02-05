@@ -7,7 +7,7 @@ interface SidebarProps {
   activeProjectId: string;
   setActiveProjectId: (id: string) => void;
   view: 'list' | 'calendar' | 'vault' | 'focus';
-  setView: (view: 'list' | 'calendar' | 'vault' | 'focus');
+  setView: (view: 'list' | 'calendar' | 'vault' | 'focus') => void;
   isSyncing?: boolean;
 }
 
